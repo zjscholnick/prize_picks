@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+from pybaseball import team_pitching
+
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+data = team_pitching(2023, ind = 1)
+print(data['Clutch'])
