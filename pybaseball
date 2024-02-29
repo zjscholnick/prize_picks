@@ -3,10 +3,19 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-from pybaseball import team_pitching
+from pybaseball import team_pitching, team_ids
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-data = team_pitching(2023, ind = 1)
-print(data['Clutch'])
+
+data2023 = team_pitching(2023)
+pace2023 = data2023["Pace"]
+era2023 = data2023["ERA"]
+
+plt.figure()
+plt.legend(title = "Pace")
+plt.title("Pace by team (sec) for 2023")
+for pace in pace2023:
+    plt.plot(pace, 'o')
+plt.show()
