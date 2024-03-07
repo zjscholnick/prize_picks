@@ -14,8 +14,8 @@ pace2023 = data2023["Pace"]
 era2023 = data2023["ERA"]
 
 plt.figure()
-plt.legend(title = "Pace")
-plt.title("Pace by team (sec) for 2023")
-for pace in pace2023:
-    plt.plot(pace, 'o')
+plt.scatter(pace2023, era2023, c='blue')
+plt.title("ERA vs. Pace for 2023")
+plt.xlabel("pace (sec)")
+plt.ylabel("era")
 plt.show()
